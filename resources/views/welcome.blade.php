@@ -81,14 +81,14 @@
 
     <div class="content">
         <div class="title m-b-md">
-            {{--{{date('H:i')}}--}}
-            @if (date(H) >= 6 && (date(H) < 12))
+            {{date('H:i')}}
+            @if (date('H') >= 6 && (date('H') < 12))
                 <p>Goedemorgen</p>
-            @elseif (date(H) >= 12 && (date(H) <18))
+            @elseif (date('H') >= 12 && (date('H') <18))
                 <p>Goedemiddag</p>
-            @elseif (date(H) >= 18 && (date(H) <=23))
+            @elseif (date('H') >= 18 && (date('H') <=23))
                 <p>Goede avond</p>
-            @elseif (date(H) > 00 && (date(H) <6))
+            @elseif (date('H') > 00 && (date('H') <6))
                 <p>Goede nacht</p>
             @else
             @endif
